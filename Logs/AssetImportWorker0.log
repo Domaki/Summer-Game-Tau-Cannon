@@ -110,3 +110,4 @@ Received Import Request.
 Start importing Assets/Artwork/StaticEnvironment/Glass.mat using Guid(5122e613437562645bda35df3e6145a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '621808878aa4c990e18f66f8ca36938b') in 0.025447 seconds
   Import took 0.028001 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
