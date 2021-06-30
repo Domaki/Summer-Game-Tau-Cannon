@@ -295,3 +295,4 @@ Received Import Request.
 Start importing Assets/Scenes/Playground.unity using Guid(84a1c2253606d2048bca47437eddfb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56bc65d4e97bf122d87ea88a4c9eb4b4') in 0.008019 seconds
   Import took 0.013566 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
