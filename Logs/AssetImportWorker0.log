@@ -102,3 +102,20 @@ Received Import Request.
 Start importing Assets/Artwork/Materials/Red.mat using Guid(ffe393a378fb8d14cb9eb71af5986450) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f85e4522fd14d470d9454e42a6afed0') in 0.029999 seconds
   Import took 0.032446 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 66.690542 seconds.
+  path: Assets/Scenes/Level 4.unity
+  artifactKey: Guid(3dc349a8dab07eb4b94da09e0a03049f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 4.unity using Guid(3dc349a8dab07eb4b94da09e0a03049f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b4d0bdd6a74fe6ca50f19476d82ad88') in 0.003696 seconds
+  Import took 0.005752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2330.385169 seconds.
+  path: Assets/Scenes/Level 5.unity
+  artifactKey: Guid(20b15e4509025e64db0e5354285a29ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 5.unity using Guid(20b15e4509025e64db0e5354285a29ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52466b5e1726da075b86cd3bb286546d') in 0.004086 seconds
+  Import took 0.006325 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
