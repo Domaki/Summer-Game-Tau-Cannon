@@ -1,0 +1,18 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.1083; Version 2004; 64bit' Language: 'en' Physical Memory: 16343 MB
+received signal from system: SIGSEGV
+Stack trace:
+RtlLookupFunctionEntry returned NULL function. Aborting stack walk.
+0x00007ff63963f02c (Unity) StackWalker::GetCurrentCallstack
+0x00007ff639647409 (Unity) StackWalker::ShowCallstack
+0x00007ff63ab0fafc (Unity) GetStacktrace
+0x00007ff63963e694 (Unity) winutils::CrashHandler::DefaultSignalHandler
+0x00007ff63c9d604a (Unity) seh_filter_exe
+0x00007ff63cd966d9 (Unity) `__scrt_common_main_seh'::`1'::filt$0
+0x00007ff63c9a3d08 (Unity) _C_specific_handler
+0x00007ffba0bf217f (ntdll) _chkstk
+0x00007ffba0ba1454 (ntdll) RtlRaiseException
+0x00007ffba0bf0cae (ntdll) KiUserExceptionDispatcher
+<Missing stacktrace information>
+
