@@ -9,7 +9,7 @@ public class LevelSelect : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MenuMain");
     }
 
     public void LevelSelect1()

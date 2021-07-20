@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("LoadIn");
+        SceneManager.LoadScene("MenuLoad");
     }
 
     public void Level()
@@ -18,16 +18,16 @@ public class MainMenu : MonoBehaviour
 
     public void Settings()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("MenuSettings");
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("MenuCredits");
     }
 
     public void Back()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MenuMain");
     }
 }
