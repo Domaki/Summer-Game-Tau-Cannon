@@ -7,6 +7,11 @@ public class LevelSelect : MonoBehaviour
 {
     // Used for traversing Level Select menus
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void LevelSelect1()
     {
         SceneManager.LoadScene("LevelSelect1");

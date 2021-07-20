@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void Level()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("LevelSelect1");
     }
 
     public void Settings()
@@ -24,5 +24,10 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Settings");
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
