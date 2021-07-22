@@ -56,8 +56,21 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\LevelSelect.cs" />
+=======
+    <Compile Include="Assets\Scripts\LevelSelect.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\TauGun.cs" />
+    <Compile Include="Assets\Scripts\PlayerLook.cs" />
+    <Compile Include="Assets\Scripts\BulletGun.cs" />
+    <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\PullableController.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\DamageSystem.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
+>>>>>>> Alex
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
