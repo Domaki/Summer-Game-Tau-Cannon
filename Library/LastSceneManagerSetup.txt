@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/MenuCredits.unity
-=======
-- path: Assets/Scenes/Playground.unity
->>>>>>> Alex
+- path: Assets/Scenes/LevelSelect2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
