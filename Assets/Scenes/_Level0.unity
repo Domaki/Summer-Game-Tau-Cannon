@@ -257,6 +257,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1782630767614836511, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1624281675}
+    - target: {fileID: 1782630767614836511, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
+      propertyPath: magnetPoint
+      value: 
+      objectReference: {fileID: 1952078138}
     - target: {fileID: 2842254485763606968, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1518,6 +1526,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1624281675 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2842254485238101093, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
+  m_PrefabInstance: {fileID: 51362652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1636427069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,3 +1880,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826912223}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1952078138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2842254485727842992, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
+  m_PrefabInstance: {fileID: 51362652}
+  m_PrefabAsset: {fileID: 0}
