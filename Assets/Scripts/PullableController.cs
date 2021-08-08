@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class PullableController : MonoBehaviour
 {
-
-    public GameObject       gun;
     public bool             stuck;
 
-    Rigidbody               rigidbod;
+    private GameObject      tauGun;
+    private Rigidbody       rigidbod;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbod = gameObject.GetComponent<Rigidbody>();
+        tauGun = GameObject.Find("tauGun");
     }
 
 
@@ -22,8 +23,8 @@ public class PullableController : MonoBehaviour
     {
         if (stuck == true) {
             // transform.position = gun.transform.position + gun.transform.forward * 2.0f;
-            transform.position = gun.transform.position + gun.transform.forward * (1.5f + 0.55f * transform.localScale.z);
-            transform.rotation = gun.transform.rotation;
+            transform.position = tauGun.transform.position + tauGun.transform.forward * (6f + 0.55f * transform.localScale.z);
+            transform.rotation = tauGun.transform.rotation;
         }
         // find way to turn on gravity when pulling but not stuck
     }
@@ -55,11 +56,10 @@ public class PullableController : MonoBehaviour
 
     // NEED TO make sure collisions only checked during pulling
     void OnCollisionEnter(Collision collision){
-        if ((collision.gameObject.tag == "Gun" || collision.gameObject.tag == "Player") && gun.GetComponent<TauGun>().heldObject == null && gun.GetComponent<TauGun>().isPulling == true)
+        if ((collision.gameObject.tag == "Gun" || collision.gameObject.tag == "Player") && tauGun.GetComponent<TauGun>().heldObject == null && tauGun.GetComponent<TauGun>().isPulling == true)
         {
             stuck = true;
-            //Debug.Log("penis");
-            gun.GetComponent<TauGun>().nowHolding(gameObject);
+            tauGun.GetComponent<TauGun>().nowHolding(gameObject);
         }
     }
 }

@@ -3,35 +3,36 @@ using UnityEngine;
 public class TauGun : MonoBehaviour
 {
 
-    public float            damage          = 10f;
-    public float            range           = 10f;
-    public float            pullFactor      = 200f;
+    public float            damage              = 10f;
+    public float            range               = 10f;
+    public float            pullFactor          = 200f;
     public float            pushFactor;
+    public float            pushCap             = 70f;
+    public float            knockbackMultiplier = 2f;
 
-    public Camera           cam;
+    private Camera           cam;
     public ParticleSystem   muzzleFlash;
-    public Transform        magnetPoint;
+    private Transform        magnetPoint;
     public bool             unPulling;
 
     public GameObject       heldObject;
     public float            pushTimer;
     public bool             isPulling;
 
-    Rigidbody               target;
+    public Rigidbody        target;
 
-    public GameObject       player;
-    public Camera           playerCam;
+    private GameObject       player;
 
     void Start()
     {
-        // magnetPoint = GetComponent<Transform>();
+        player          = GameObject.Find("First Person Player");
+        magnetPoint     = GameObject.Find("First Person Player").GetComponent<Transform>();
+        cam             = Camera.main;
     }
-
 
     // Update is called once per frame
     void Update()
     {
-
         // Makes sure that only one object can be held. If one
         if (heldObject == null && Input.GetButton("Fire1"))
         {
@@ -61,13 +62,13 @@ public class TauGun : MonoBehaviour
         // Knockback will be based on charge later too
         if (Input.GetMouseButtonUp(1))
         {
-            pushFactor = 50f * pushTimer;
-            if (pushFactor > 100)
+            pushFactor = pushCap * pushTimer;
+            if (pushFactor > pushCap * 2f)
             {
-                pushFactor = 100;
+                pushFactor = pushCap * 2f;
             }
 
-            player.GetComponent<PlayerMovement>().knockback(playerCam.transform.forward.normalized * -1, pushFactor);
+            player.GetComponent<PlayerMovement>().knockback(cam.transform.forward.normalized * -1, pushFactor * knockbackMultiplier);
 
             Push();
             pushTimer = 0;
@@ -84,22 +85,25 @@ public class TauGun : MonoBehaviour
         // If the raycast hits something, get the target's rigidbody and pull it towards the gun
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
-            // Checks when the raycast stops hitting the object being pulled currently to turn gravity back on
-            if (hit.rigidbody != target && target != null)
+            if (hit.transform.gameObject.GetComponent<PullableController>() && hit.transform.gameObject.CompareTag("Movable"))
             {
-                target.useGravity = true;
-            }
+                // Checks when the raycast stops hitting the object being pulled currently to turn gravity back on
+                if (hit.rigidbody != target && target != null)
+                {
+                    target.useGravity = true;
+                }
 
-            //DamageSystem target = hit.transform.GetComponent<DamageSystem>();
-            target = hit.rigidbody;
+                //DamageSystem target = hit.transform.GetComponent<DamageSystem>();
+                target = hit.rigidbody;
 
-            if (target != null)
-            {
-                //target.AddForce((magnetPoint.position + magnetPoint.transform.forward * 0.5f - target.position + new Vector3(0, 0.9f, 0)).normalized * forceFactor * Time.fixedDeltaTime);
-                //hit.collider.gameObject.GetComponent<PullableController>().gravityOff();
+                if (target != null)
+                {
+                    //target.AddForce((magnetPoint.position + magnetPoint.transform.forward * 0.5f - target.position + new Vector3(0, 0.9f, 0)).normalized * forceFactor * Time.fixedDeltaTime);
+                    //hit.collider.gameObject.GetComponent<PullableController>().gravityOff();
 
-                target.velocity = (magnetPoint.position + magnetPoint.transform.forward * 0.5f - target.position + new Vector3(0, 0.9f, 0)).normalized * pullFactor * Time.fixedDeltaTime;
-                target.useGravity = false;
+                    target.velocity = (magnetPoint.position + magnetPoint.transform.forward * 0.5f - target.position + new Vector3(0, 0.9f, 0)).normalized * pullFactor * Time.fixedDeltaTime;
+                    target.useGravity = false;
+                }
             }
         }
     }
@@ -119,12 +123,10 @@ public class TauGun : MonoBehaviour
             heldRigidBody.AddForce((cam.transform.forward).normalized * pushFactor, ForceMode.Impulse);
             heldObject = null;
         }
-
         else
         {
             //play 'nothing held' sound
         }
-
         //put player knock back here
     }
 

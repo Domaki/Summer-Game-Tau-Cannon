@@ -6,18 +6,18 @@ using UnityEngine;
 // Controls the movement of the player camera and the player model for the first person camera
 public class PlayerLook : MonoBehaviour
 {
-
     public float        mouseSensitivity    = 100f;
-
-    public Transform    playerBody;
+    private Transform    playerBody;
 
     float               xRotation           = 0f;
+
 
     // Start is called before the first frame update
     // Locks the mouse onto the application
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        playerBody = GameObject.Find("First Person Player").GetComponent<Transform>();
     }
 
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DamageSystem : MonoBehaviour
 {
-
     public float health = 50f;
+
 
     // Update is called once per frame
     public void TakeDamage(float amount)
@@ -16,6 +16,7 @@ public class DamageSystem : MonoBehaviour
             Die();
         }
     }
+
 
     void Die()
     {

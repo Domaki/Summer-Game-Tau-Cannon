@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 714238977}
   - component: {fileID: 714238976}
   - component: {fileID: 714238975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1310,9 +1310,10 @@ GameObject:
   - component: {fileID: 1101232188}
   - component: {fileID: 1101232187}
   - component: {fileID: 1101232186}
-  m_Layer: 0
+  - component: {fileID: 1101232191}
+  m_Layer: 6
   m_Name: Metal Box (Small)
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1409,6 +1410,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1101232191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101232185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268833e73fb91d46b798416c32b4cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuck: 0
 --- !u!1 &1208440553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,9 +1626,10 @@ GameObject:
   - component: {fileID: 1398572470}
   - component: {fileID: 1398572469}
   - component: {fileID: 1398572468}
-  m_Layer: 0
+  - component: {fileID: 1398572473}
+  m_Layer: 6
   m_Name: Battery 1
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1712,6 +1727,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
+--- !u!114 &1398572473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398572467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268833e73fb91d46b798416c32b4cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuck: 0
 --- !u!1 &1523156424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2130,7 @@ GameObject:
   - component: {fileID: 1717305557}
   - component: {fileID: 1717305556}
   - component: {fileID: 1717305555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2863,9 +2891,10 @@ GameObject:
   - component: {fileID: 2011946331}
   - component: {fileID: 2011946330}
   - component: {fileID: 2011946329}
-  m_Layer: 0
+  - component: {fileID: 2011946334}
+  m_Layer: 6
   m_Name: Battery 2
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2963,6 +2992,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: 0}
+--- !u!114 &2011946334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011946328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268833e73fb91d46b798416c32b4cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuck: 0
 --- !u!1 &2013339980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,9 +3018,10 @@ GameObject:
   - component: {fileID: 2013339983}
   - component: {fileID: 2013339982}
   - component: {fileID: 2013339981}
-  m_Layer: 0
+  - component: {fileID: 2013339986}
+  m_Layer: 6
   m_Name: Metal Box (Large)
-  m_TagString: Untagged
+  m_TagString: Movable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3075,6 +3118,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2013339986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013339980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268833e73fb91d46b798416c32b4cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stuck: 0
 --- !u!1 &2125683500
 GameObject:
   m_ObjectHideFlags: 0

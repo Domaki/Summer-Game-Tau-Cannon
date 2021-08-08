@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float        jumpHeight         = 3f;
 
     // Used in determining whether the player is on the ground
-    public Transform    groundCheck;
+    private Transform    groundCheck;
     public float        groundDistance     = 0.4f;
     public LayerMask    groundMask;
 
@@ -20,10 +20,16 @@ public class PlayerMovement : MonoBehaviour
     Vector3             velocity;
     bool                isGrounded;
 
-    public float knockBackMultiplier = .5f;
-    public float knockBackTime = .25f;
-    private float knockBackCounter;
-    public Vector3 knockBackMove;
+    public float        knockBackMultiplier = .5f;
+    public float        knockBackTime = .25f;
+    public float        knockBackCounter;
+    public Vector3      knockBackMove;
+
+    void Start()
+    {
+        groundCheck = GameObject.Find("GroundCheck").GetComponent<Transform>();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -40,17 +46,14 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        //if (knockBackCounter <= 0)
-        //{
         // Applies horizontal velocity to the player
         move = transform.right * x + transform.forward * z;
 
         // Math for the jump function
-            if (Input.GetButtonDown("Jump") && isGrounded)
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            }
-        //}
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
 
         controller.Move(move * speed * Time.deltaTime);
 
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(knockBackMove * knockBackMultiplier * knockBackCounter * Time.deltaTime);
         }
     }
+
 
     public void knockback(Vector3 direction, float pushForce)
     {
