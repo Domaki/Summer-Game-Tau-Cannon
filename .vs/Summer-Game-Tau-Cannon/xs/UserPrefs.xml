@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{3DFCD4D7-0585-B31D-B220-134CAF138BCE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TauGun.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="67" Column="6" />
+      <File FileName="Assets/Scripts/TauGun.cs" Line="104" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="94dc88cd-4a51-415b-843c-fee462789464" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
