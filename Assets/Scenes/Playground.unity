@@ -409,11 +409,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464034338}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &593615274 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2842254485763606968, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-  m_PrefabInstance: {fileID: 1252328540}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &685899168
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,18 +825,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1782630767614836511, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1876553297}
-    - target: {fileID: 1782630767614836511, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-      propertyPath: magnetPoint
-      value: 
-      objectReference: {fileID: 593615274}
-    - target: {fileID: 2842254485727842995, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2842254485763606968, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -886,17 +869,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2842254485763606971, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-      propertyPath: groundMask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 2842254485763606974, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
       propertyPath: m_Name
       value: First Person Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2842254485763606974, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
@@ -1156,11 +1131,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649756173}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!20 &1876553297 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2842254485238101093, guid: e7ef46276dbfe3749940c9f486f0ca65, type: 3}
-  m_PrefabInstance: {fileID: 1252328540}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067514305
 GameObject:
   m_ObjectHideFlags: 0
