@@ -511,10 +511,11 @@ MonoBehaviour:
   speed: 36
   gravity: -58.86
   jumpHeight: 12
-  groundDistance: 1.6
+  groundDistance: 0.7
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  isGrounded: 0
   knockBackMultiplier: 2
   knockBackTime: 1
   knockBackCounter: 0

@@ -3,31 +3,34 @@ using UnityEngine;
 public class TauGun : MonoBehaviour
 {
 
-    public float            damage              = 10f;
-    public float            range               = 10f;
-    public float            pullFactor          = 200f;
-    public float            pushFactor;
-    public float            pushCap             = 70f;
-    public float            knockbackMultiplier = 2f;
+    public float                    damage              = 10f;
+    public float                    range               = 10f;
+    public float                    pullFactor          = 200f;
+    public float                    pushFactor          = 0f;
+    public float                    pushCap             = 70f;
+    public float                    knockbackMultiplier = 2f;
 
-    private Camera           cam;
-    public ParticleSystem   muzzleFlash;
-    private Transform        magnetPoint;
-    public bool             unPulling;
+    private Camera                  cam;
+    public ParticleSystem           muzzleFlash;
+    private Transform               magnetPoint;
+    public bool                     unPulling;
 
-    public GameObject       heldObject;
-    public float            pushTimer;
-    public bool             isPulling;
+    public GameObject               heldObject;
+    public float                    pushTimer;
+    public bool                     isPulling;
 
-    public Rigidbody        target;
+    public Rigidbody                target;
 
-    private GameObject       player;
+    private GameObject              player;
+
+    private ChargeBarController     chargeBar;
 
     void Start()
     {
         player          = GameObject.Find("First Person Player");
         magnetPoint     = GameObject.Find("First Person Player").GetComponent<Transform>();
         cam             = Camera.main;
+        chargeBar       = GameObject.Find("Charge Bar").GetComponent<ChargeBarController>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,7 @@ public class TauGun : MonoBehaviour
             
             pushTimer += Time.deltaTime;
             Debug.Log(pushTimer);
+            chargeBar.changeCharge(pushTimer);
         }
 
         // This is allowed while pulling, unintentional but seems interesting
@@ -72,7 +76,10 @@ public class TauGun : MonoBehaviour
 
             Push();
             pushTimer = 0;
+            chargeBar.changeCharge(pushTimer);
         }
+
+
     }
 
 
