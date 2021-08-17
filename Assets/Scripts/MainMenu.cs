@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("MenuLoad");
+        SceneManager.LoadScene("Sandbox Level");
     }
 
     public void Level()
